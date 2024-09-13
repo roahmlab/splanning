@@ -52,12 +52,12 @@ author-footnotes: |
 links:
   - icon: arxiv
     icon-library: simpleicons
-    text: ArXiv
-    url: https://arxiv.org/
+    text: ArXiv (Coming Soon!)
+    # url: https://arxiv.org/
   - icon: github
     icon-library: simpleicons
-    text: Code
-    url: https://github.com/roahmlab/splanning
+    text: Code (Coming Soon!)
+    # url: https://github.com/roahmlab/splanning
 
 # End Front Matter
 ---
@@ -106,7 +106,6 @@ Second, this paper introduces a normalized reformulation of Gaussian Splatting t
 Third, a method is presented to optimize trajectories while avoiding collisions with a scene represented by a Gaussian Splat.
 Experiments demonstrate that SPLANNING outperforms state-of-the-art methods in generating collision-free trajectories in highly cluttered environments.
 The proposed system is also tested on a real-world robot manipulator.
-Code will be available on GitHub at [roahmlab/splanning](https://github.com/roahmlab/splanning).
 
 </div> <!-- END ABSTRACT -->
 
@@ -116,7 +115,7 @@ Code will be available on GitHub at [roahmlab/splanning](https://github.com/roah
 # [Approach](#approach)
 
 <!-- # Contributions -->
-This paper addresses the limitations of existing approaches by proposing SPLANNING, a real-time, receding-horizon motion planning algorithm.
+This paper proposed SPLANNING, a real-time, receding-horizon motion planning algorithm.
 SPLANNING combines a simple and tight sphere-based geometric representation of the reachability of a robot with radiance field representations of an environment scene to enable risk-aware planning through a rendering-based probability bound.
 This differs from existing approaches such as CATNIPS and SplatNav in that planning can be performed with probabilistic bounds and directly in a scene with a normalized splatting representation without additional preprocessing passes, opening the door for real-time splatting and risk-aware planning.
 
@@ -174,7 +173,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
       loop
       onclick="this.paused ? this.play() : this.pause();"
       poster="assets/thumb/thumb.jpg">
-      <source src="assets/video.mp4" type="video/mp4">
+      <source src="assets/10obs.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
     <p>10 obstacles</p>
@@ -190,7 +189,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
       loop
       onclick="this.paused ? this.play() : this.pause();"
       poster="assets/thumb/thumb.jpg">
-      <source src="assets/video.mp4" type="video/mp4">
+      <source src="assets/20obs.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
     <p>20 obstacles</p>
@@ -206,7 +205,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
       loop
       onclick="this.paused ? this.play() : this.pause();"
       poster="assets/thumb/thumb.jpg">
-      <source src="assets/video.mp4" type="video/mp4">
+      <source src="assets/40obs.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
     <p>40 obstacles</p>
