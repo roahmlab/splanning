@@ -4,7 +4,7 @@ layout: default
 title:  "SPLANNING"
 date:   2024-09-13 10:00:00 -0500
 description: >- # Supports markdown
-  Risk-Aware Trajectory Planning in a Normalized Gaussian Splat
+  Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat
 show-description: true
 
 # Add page-specifi mathjax functionality. Manage global setting in _config.yml
@@ -81,27 +81,11 @@ links:
       muted
       loop
       style="display:block; width:100%; height:auto;"
-      poster="assets/thumb/thumb.jpg">
-      <source src="assets/video.mp4" type="video/mp4">
+      poster="assets/thumb/mainvid_compressed.jpg">
+      <source src="assets/mainvid_compressed.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
-    <p>SPLANNING side-by-side real world (make single wide video)</p>
-  </div>
-  <div class="video-item" style="min-width:0;">
-    <video
-      class="autoplay-on-load"
-      preload="none"
-      controls
-      disablepictureinpicture
-      playsinline
-      muted
-      loop
-      style="display:block; width:100%; height:auto;"
-      poster="assets/thumb/thumb.jpg">
-      <source src="assets/video.mp4" type="video/mp4">
-      Your browser does not support this video.
-    </video>
-    <p>SPLANNING side-by-side real world (make single wide video)</p>
+    <p>SPLANNING side-by-side real world</p>
   </div>
 </div> <!-- END OVERVIEW VIDEOS -->
 
@@ -110,7 +94,7 @@ links:
 
 # [Abstract](#abstract)
 
-Neural Radiation Fields and Gaussian Splatting have recently transformed the field of computer vision.
+Neural Radiance Fields and Gaussian Splatting have recently transformed the field of computer vision.
 By estimating a scene's radiance field, these techniques enable photo-realistic representation of complex scenes.
 Despite this success, they have seen only limited use in real-world robotics tasks such as motion planning.
 Two key factors have contributed to this limited success.

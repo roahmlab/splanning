@@ -13,7 +13,7 @@ remote_theme: BuildingAtom/project-pages@v1.2-theme
 
 # Metadata and SEO-helper stuff
 # This title here should correspond to your base site or as a shared title
-title: "Let's Make a Splan: Risk-Aware Trajectory Planning in a Normalized Gaussian Splat"
+title: "Let's Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat"
 baseurl: "/splanning" # the subpath of your site, e.g. /blog
 url: "https://roahmlab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # This sets window title, not the title you read on the page
