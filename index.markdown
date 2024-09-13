@@ -131,20 +131,13 @@ $$
 \newcommand{\bound}{\mathcal{H}}
   \begin{align}
 \underset{k \in K}{\min}& \quad \mathrm{\texttt{cost}}(k) \\
-\text{s.t.}& \quad q_j(T_i; k) \subseteq [\qlim^-, \qlim^+] \quad\quad\quad \forall (i,j) \in N_t \times N_q \label{eq:pz_optpos} \\
-& \quad \dot{q}_j(T_i; k) \subseteq [\dqlim^-, \dqlim^+]  \quad\quad\quad \forall (i,j) \in N_t \times N_q \label{eq:pz_optvel}\\
-& \sum_{\substack{(j, m) \in \\N_q \times N_s}}\hspace{-4pt}1\hspace{-2pt} - \exp\hspace{-3pt}\left(\hspace{-3pt}- \frac{\bound(S_{j,i,m}(q_j(T_i; k))}{4\pi \rho^3}  \hspace{-3pt}\right)\hspace{-3pt} <\hspace{-3pt} \alpha \beta \quad \forall i \in N_t \label{eq:pz_optcolcon}
+% \text{s.t.}& \quad q_j(T_i; k) \subseteq [\qlim^-, \qlim^+] \quad\quad\quad \forall (i,j) \in N_t \times N_q \label{eq:pz_optpos} \\
+% & \quad \dot{q}_j(T_i; k) \subseteq [\dqlim^-, \dqlim^+]  \quad\quad\quad \forall (i,j) \in N_t \times N_q \label{eq:pz_optvel}\\
+\text{s.t.}&\quad \texttt{Prob}(\texttt{collision}) < \textit{thresh} 
 \end{align}
 $$
 
-where \\(k \in K\\) is the trajectory parameter, \\(\mathrm{\texttt{cost}}(k)\\) is a task-specific cost function, and 
-
-$$
-\newcommand{\erf}{\mathrm{erf}}
-\bound(S) = \sum_{n=1}^{n_G} \eta'_n w_n  \cdot \nonumber \prod_{\ell=1}^3\left[\sqrt{\frac{\pi \lambda'_{n,\ell}}{2}} \left( \erf\left(\frac{\rho - \mu'_{n,\ell}}{\sqrt{2\lambda'_{n,\ell}}}\right)
-    -\erf\left(\frac{\rho + \mu'_{n,\ell}}{\sqrt{2\lambda'_{n,\ell}}}\right) \right)\right].
-$$
-
+The paper, coming soon, details the derivation of the bound on the probability of collision.
 
 Our key contributions are:
 1. A derivation of a bound on the probability that a 3D body collides with a scene represented by a radiance field, starting directly from the rendering equation;
@@ -168,7 +161,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
 
 <!-- START SIMULATION VIDEOS -->
 <div class="video-container">
-  <div class="video-item">
+  <div class="video-item tigther">
     <video
       class="autoplay-in-frame"
       preload="none"
@@ -184,7 +177,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
     </video>
     <p>10 obstacles</p>
   </div>
-  <div class="video-item">
+  <div class="video-item tighter">
     <video
       class="autoplay-in-frame"
       preload="none"
@@ -200,7 +193,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
     </video>
     <p>20 obstacles</p>
   </div>
-  <div class="video-item">
+  <div class="video-item tighter">
     <video
       class="autoplay-in-frame"
       preload="none"
