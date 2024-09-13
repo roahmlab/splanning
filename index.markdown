@@ -137,7 +137,13 @@ $$
 \end{align}
 $$
 
-where \\(k \in K\\) is the trajectory parameter and \\(\mathrm{\texttt{cost}}(k)\\) is a task-specific cost function.
+where \\(k \in K\\) is the trajectory parameter, \\(\mathrm{\texttt{cost}}(k)\\) is a task-specific cost function, and 
+
+$$
+\newcommand{\erf}{\mathrm{erf}}
+\bound(S) = \sum_{n=1}^{n_G} \eta'_n w_n  \cdot \nonumber \prod_{\ell=1}^3\left[\sqrt{\frac{\pi \lambda'_{n,\ell}}{2}} \left( \erf\left(\frac{\rho - \mu'_{n,\ell}}{\sqrt{2\lambda'_{n,\ell}}}\right)
+    -\erf\left(\frac{\rho + \mu'_{n,\ell}}{\sqrt{2\lambda'_{n,\ell}}}\right) \right)\right].
+$$
 
 
 Our key contributions are:
