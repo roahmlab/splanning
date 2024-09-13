@@ -154,14 +154,15 @@ Our key contributions are:
 # [Results](#results)
 
 ## [Simulation Results](#simulation-results)
-The following videos demonstrate the performance of SPLANNING to other methods in randomly generated scenarios.
-In each of these, SPLANNING achieves the desired goal configuration in less steps, accounting for risk.
-SPARROWS does acheive the goal or stop in a safe configuration, but it is more slower and conservative.
-On the other hand, MPOT and TRAJOPT both stop due to colliding with the environment.
+The following videos demonstrate the performance of SPLANNING in simulated worlds with increasing amounts of clutter.l
+<!-- The following videos demonstrate the performance of SPLANNING to other methods in randomly generated scenarios. -->
+<!-- In each of these, SPLANNING achieves the desired goal configuration in less steps, accounting for risk. -->
+<!-- SPARROWS does acheive the goal or stop in a safe configuration, but it is more slower and conservative.
+On the other hand, MPOT and TRAJOPT both stop due to colliding with the environment. -->
 
 <!-- START SIMULATION VIDEOS -->
 <div class="video-container">
-  <div class="video-item tigther">
+  <div class="video-item tighter">
     <video
       class="autoplay-in-frame"
       preload="none"
@@ -227,7 +228,7 @@ We also run demonstrate success with other hardware configurations.
       loop
       onclick="this.paused ? this.play() : this.pause();"
       poster="assets/thumb/thumb.jpg">
-      <source src="assets/video.mp4" type="video/mp4">
+      <source src="assets/ikea.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
   </div>
@@ -242,22 +243,7 @@ We also run demonstrate success with other hardware configurations.
       loop
       onclick="this.paused ? this.play() : this.pause();"
       poster="assets/thumb/thumb.jpg">
-      <source src="assets/video.mp4" type="video/mp4">
-      Your browser does not support this video.
-    </video>
-  </div>
-  <div class="video-item">
-    <video
-      class="autoplay-in-frame"
-      preload="none"
-      disableremoteplayback
-      disablepictureinpicture
-      playsinline
-      muted
-      loop
-      onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
-      <source src="assets/video.mp4" type="video/mp4">
+      <source src="assets/shelves.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
   </div>
