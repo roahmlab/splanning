@@ -272,7 +272,7 @@ This project was developed in [Robotics and Optimization for Analysis of Human M
 
 ```bibtex
 @article{michauxisaacson2024splanning,
-  title={Let's Make a Splan: Risk-Aware Trajectory Planning in a Normalized Gaussian Splat},
+  title={Let's Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat},
   author={Jonathan Michaux and Seth Isaacson and Challen Enninful Adu and Adam Li and Rahul Kashyap Swayampakula and Parker Ewen and Sean Rice and Katherine A. Skinner and Ram Vasudevan},
   journal={},
   year={2024},
