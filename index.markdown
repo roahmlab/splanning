@@ -154,7 +154,7 @@ Our key contributions are:
 # [Results](#results)
 
 ## [Simulation Results](#simulation-results)
-The following videos demonstrate the performance of SPLANNING in simulated worlds with increasing amounts of clutter.l
+The following videos demonstrate the performance of SPLANNING in simulated worlds with increasing amounts of clutter.
 <!-- The following videos demonstrate the performance of SPLANNING to other methods in randomly generated scenarios. -->
 <!-- In each of these, SPLANNING achieves the desired goal configuration in less steps, accounting for risk. -->
 <!-- SPARROWS does acheive the goal or stop in a safe configuration, but it is more slower and conservative.
