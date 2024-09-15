@@ -172,7 +172,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/10obs.jpg">
       <source src="assets/10obs.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
@@ -188,7 +188,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/20obs.jpg">
       <source src="assets/20obs.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
@@ -204,7 +204,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/40obs.jpg">
       <source src="assets/40obs.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
@@ -227,7 +227,7 @@ We also demonstrate success with other hardware configurations.
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/ikea.jpg">
       <source src="assets/ikea.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
@@ -242,7 +242,7 @@ We also demonstrate success with other hardware configurations.
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/shelves.jpg">
       <source src="assets/shelves.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
