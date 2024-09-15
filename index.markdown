@@ -133,7 +133,7 @@ $$
 \underset{k \in K}{\min}& \quad \mathrm{\texttt{cost}}(k) \\
 % \text{s.t.}& \quad q_j(T_i; k) \subseteq [\qlim^-, \qlim^+] \quad\quad\quad \forall (i,j) \in N_t \times N_q \label{eq:pz_optpos} \\
 % & \quad \dot{q}_j(T_i; k) \subseteq [\dqlim^-, \dqlim^+]  \quad\quad\quad \forall (i,j) \in N_t \times N_q \label{eq:pz_optvel}\\
-\text{s.t.}&\quad \texttt{Prob}(\texttt{collision}) < \textit{thresh} 
+\text{s.t.}&\quad \texttt{Prob}(\texttt{collision}) < \beta 
 \end{align}
 $$
 
@@ -214,7 +214,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
 
 ## [Hardware Results](#hardware-results)
 
-We also run demonstrate success with other hardware configurations.
+We also demonstrate success with other hardware configurations.
 <!-- START HARDWARE VIDEOS -->
 <div class="video-container">
   <div class="video-item">
