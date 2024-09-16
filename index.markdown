@@ -133,7 +133,7 @@ $$
 \underset{k \in K}{\min}& \quad \mathrm{\texttt{cost}}(k) \\
 % \text{s.t.}& \quad q_j(T_i; k) \subseteq [\qlim^-, \qlim^+] \quad\quad\quad \forall (i,j) \in N_t \times N_q \label{eq:pz_optpos} \\
 % & \quad \dot{q}_j(T_i; k) \subseteq [\dqlim^-, \dqlim^+]  \quad\quad\quad \forall (i,j) \in N_t \times N_q \label{eq:pz_optvel}\\
-\text{s.t.}&\quad \texttt{Prob}(\texttt{collision}) < \textit{thresh} 
+\text{s.t.}&\quad \texttt{Prob}(\texttt{collision}) < \beta 
 \end{align}
 $$
 
@@ -154,7 +154,7 @@ Our key contributions are:
 # [Results](#results)
 
 ## [Simulation Results](#simulation-results)
-The following videos demonstrate the performance of SPLANNING in simulated worlds with increasing amounts of clutter.l
+The following videos demonstrate the performance of SPLANNING in simulated worlds with increasing amounts of clutter.
 <!-- The following videos demonstrate the performance of SPLANNING to other methods in randomly generated scenarios. -->
 <!-- In each of these, SPLANNING achieves the desired goal configuration in less steps, accounting for risk. -->
 <!-- SPARROWS does acheive the goal or stop in a safe configuration, but it is more slower and conservative.
@@ -172,7 +172,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/10obs.jpg">
       <source src="assets/10obs.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
@@ -188,7 +188,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/20obs.jpg">
       <source src="assets/20obs.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
@@ -204,7 +204,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/40obs.jpg">
       <source src="assets/40obs.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
@@ -214,7 +214,7 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
 
 ## [Hardware Results](#hardware-results)
 
-We also run demonstrate success with other hardware configurations.
+We also demonstrate success with other hardware configurations.
 <!-- START HARDWARE VIDEOS -->
 <div class="video-container">
   <div class="video-item">
@@ -227,7 +227,7 @@ We also run demonstrate success with other hardware configurations.
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/ikea.jpg">
       <source src="assets/ikea.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
@@ -242,7 +242,7 @@ We also run demonstrate success with other hardware configurations.
       muted
       loop
       onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/thumb.jpg">
+      poster="assets/thumb/shelves.jpg">
       <source src="assets/shelves.mp4" type="video/mp4">
       Your browser does not support this video.
     </video>
@@ -272,7 +272,7 @@ This project was developed in [Robotics and Optimization for Analysis of Human M
 
 ```bibtex
 @article{michauxisaacson2024splanning,
-  title={Let's Make a Splan: Risk-Aware Trajectory Planning in a Normalized Gaussian Splat},
+  title={Let's Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat},
   author={Jonathan Michaux and Seth Isaacson and Challen Enninful Adu and Adam Li and Rahul Kashyap Swayampakula and Parker Ewen and Sean Rice and Katherine A. Skinner and Ram Vasudevan},
   journal={},
   year={2024},
