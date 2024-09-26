@@ -53,7 +53,7 @@ links:
   - icon: arxiv
     icon-library: simpleicons
     text: ArXiv (Coming Soon!)
-    # url: https://arxiv.org/
+    url: https://arxiv.org/abs/2409.16915
   - icon: github
     icon-library: simpleicons
     text: Code (Coming Soon!)
@@ -274,10 +274,12 @@ This project was developed in [Robotics and Optimization for Analysis of Human M
 @article{michauxisaacson2024splanning,
   title={Let's Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat},
   author={Jonathan Michaux and Seth Isaacson and Challen Enninful Adu and Adam Li and Rahul Kashyap Swayampakula and Parker Ewen and Sean Rice and Katherine A. Skinner and Ram Vasudevan},
-  journal={},
   year={2024},
-  volume={},
-  url={}}
+  eprint={2409.16915},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2409.16915}, 
+}
 ```
 </div>
 <!-- END CITATION -->
