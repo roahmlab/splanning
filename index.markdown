@@ -47,7 +47,7 @@ authors:
 # See the sel_map and armour-dev examples.
 author-footnotes: |
   \* Denotes equal contribution.
-  <br> All authors affiliated with the department of Mechanical Engineering and Department of Robotics of the University of Michigan, Ann Arbor.
+  <br> All authors affiliated with the department of Department of Robotics of the University of Michigan, Ann Arbor.
 
 links:
   - icon: arxiv
