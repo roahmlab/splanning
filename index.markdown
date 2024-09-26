@@ -52,7 +52,7 @@ author-footnotes: |
 links:
   - icon: arxiv
     icon-library: simpleicons
-    text: ArXiv (Coming Soon!)
+    text: ArXiv
     url: https://arxiv.org/abs/2409.16915
   - icon: github
     icon-library: simpleicons
