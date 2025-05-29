@@ -50,43 +50,10 @@ $data-fonts: ({%- for font in site.data.fonts.fonts -%}{{ font.class }}: {{- fon
 
 @import "{{ site.theme }}";
 
-// Add some video flex styling
-.video-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    column-gap: 0.1rem;
-    row-gap: 0.2rem;
-    padding: 0;
-    margin: 0;
-    .video-item {
-        min-width: 320px;
-        max-width: 100%;
-        flex-shrink: 2;
-        flex-basis: 30%;
-        flex-grow: 1;
-        @include media-query(mobile) {
-            min-width: 100%;
-        }
-        video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        &.tighter {
-            min-width: 120px;
-            flex-basis: 30%;
-            @include media-query(mobile) {
-                flex-basis: 120px;
-                flex-grow: 1;
-                flex-shrink: 1;
-                min-width: 0;
-            }
-        }
-        p {
-            text-align: center;
-            font-weight: bold;
-        }
+.multicontent-container .multicontent-item {
+    p {
+        text-align: center;
+        font-weight: bold;
     }
 }
 
@@ -95,6 +62,11 @@ h2 {
     margin-top: 0.4em !important;
 }
 
-.authors .box .single {
-    flex-basis: 11em;
+// Make the authors section look better
+.authors .box {
+    max-width: 900px;
+    margin: auto;
+    .single {
+        flex-basis: 11em;
+    }
 }

@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 # THis is using GitHub Pages, to upgrade, run `bundle update github-pages`.
-gem "github-pages", "~>  	228", group: :jekyll_plugins
+gem "github-pages", "~>  	232", group: :jekyll_plugins
 gem "webrick", "~> 1.8"
 # If you have any plugins, put them here!
 group :jekyll_plugins do

@@ -3,6 +3,8 @@
 This project is designed to be both configurable and lightweight.
 Most likely if you're using this as a project specific page, you only need one markdown file to describe the whole page.
 
+This project is released with an UNLICENSE present in the theme branches.
+
 **Do NOT fork this repo to use the template!**
 This repo holds the remote-theme for GitHub Pages in an orphan branch and as a result, forking it means you are actually downloading much more than you need (even if the theme isn't that big).
 Besides, it makes it more difficult to get running as a project page anyway!
@@ -42,8 +44,10 @@ ls -la
 ```
 
 I suggest `rsync` here because it's able to copy the hidden files that globbing with `mv` or `cp` run the risk of ignoring.
+
+### Windows
+For Windows, simply download the zip from the `Download Code` button or from the releases on the right, and extract it to your desired repository location.
 Windows users shouldn't have a problem with using Windows Explorer as that doesn't hide `.` prefixed files.
-Just download the zip from the top if you're a Windows user and extract it to your desired repository location.
 
 ## Delete extra examples
 
@@ -103,5 +107,5 @@ If you wish to add plugins, check [GitHub Pages Dependency Versions](https://pag
 ---
 
 At this point, you have all the most basic initial configuration down!
-Read through `index.markdown` to see what can be done in terms of actual contet.
+Read through `index.markdown` to see what can be done in terms of actual content.
 The kramdown interpreter is used here, with the rouge code-highlighter.

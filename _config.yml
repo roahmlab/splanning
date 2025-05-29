@@ -9,7 +9,7 @@ plugins:
   # Make sure GitHub supports them here: https://pages.github.com/versions/
 
 # Don't change! (or do change if you really want ig)
-remote_theme: BuildingAtom/project-pages@v1.2-theme
+remote_theme: BuildingAtom/project-pages@v1.3-theme
 
 # Metadata and SEO-helper stuff
 # This title here should correspond to your base site or as a shared title
@@ -35,7 +35,7 @@ footer:
   # connections-pre: # This prefixes the connections section at the botom.
   # connections-post: Socials
   connections:
-    github: https://github.com/roahmlab/sparrows
+    github: https://github.com/roahmlab/splanning
     arxiv: https://arxiv.org/abs/2402.08857
   # related-sites:
   #   sites:

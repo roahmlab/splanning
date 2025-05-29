@@ -15,8 +15,8 @@ autoanchor: false
 
 # Preview image for social media cards
 image:
-  path: /assets/fig1_compressed.jpg
-  height: 800
+  path: /assets/splanning_compressed.jpg
+  height: 600
   width: 800
   alt: SPLANNING Main Figure - Risk Aware Planning in a Real World Splat
 
@@ -70,24 +70,18 @@ links:
 # [Overview Videos](#overview-videos)
 
 <!-- BEGIN OVERVIEW VIDEOS -->
-<div class="fullwidth video-container" style="flex-wrap:nowrap; padding: 0 0.2em">
-  <div class="video-item" style="min-width:0;">
-    <video
-      class="autoplay-on-load"
-      preload="none"
-      controls
-      disablepictureinpicture
-      playsinline
-      muted
-      loop
-      style="display:block; width:100%; height:auto;"
-      poster="assets/thumb/mainvid_compressed.jpg">
-      <source src="assets/mainvid_compressed.mp4" type="video/mp4">
-      Your browser does not support this video.
-    </video>
-    <p>SPLANNING side-by-side real world</p>
-  </div>
-</div> <!-- END OVERVIEW VIDEOS -->
+<div class="fullwidth">
+  {% include util/video
+    content="assets/mainvid_compressed.mp4"
+    poster="assets/thumb/mainvid_compressed.jpg"
+    autoplay-on-load=true
+    preload="none"
+    muted=true
+    loop=true
+    playsinline=true
+    %}
+  <p style="text-align:center; font-weight:bold;">SPLANNING side-by-side real world</p>
+</div><!-- END OVERVIEW VIDEOS -->
 
 <!-- BEGIN ABSTRACT -->
 <div markdown="1" class="content-block justify grey">
@@ -114,12 +108,15 @@ The proposed system is also tested on a real-world robot manipulator.
 
 # [Approach](#approach)
 
+![method_overview](./assets/fig2_compressed.webp)
+{: class="fullwidth no-pre"}
+
 <!-- # Contributions -->
 This paper proposed SPLANNING, a real-time, receding-horizon motion planning algorithm.
 SPLANNING combines a simple and tight sphere-based geometric representation of the reachability of a robot with radiance field representations of an environment scene to enable risk-aware planning through a rendering-based probability bound.
 This differs from existing approaches such as CATNIPS and SplatNav in that planning can be performed with probabilistic bounds and directly in a scene with a normalized splatting representation without additional preprocessing passes, opening the door for real-time splatting and risk-aware planning.
 
-![link_construction](./assets/collision_comparison.png)
+![collision_comparison](./assets/collision_comparison.png)
 {: class="fullwidth"}
 
 Prior to planning, a normalized Gaussian Splatting representation of the scene is constructed.
@@ -161,53 +158,49 @@ The following videos demonstrate the performance of SPLANNING in simulated world
 On the other hand, MPOT and TRAJOPT both stop due to colliding with the environment. -->
 
 <!-- START SIMULATION VIDEOS -->
-<div class="video-container">
-  <div class="video-item tighter">
-    <video
-      class="autoplay-in-frame"
+<div class="multicontent-container tighter">
+  <div class="multicontent-item">
+    {% include util/video
+      content="assets/10obs.mp4"
+      poster="assets/thumb/10obs.jpg"
+      autoplay-in-frame=true
+      autoplay-on-load=false
       preload="none"
-      disableremoteplayback
-      disablepictureinpicture
-      playsinline
-      muted
-      loop
-      onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/10obs.jpg">
-      <source src="assets/10obs.mp4" type="video/mp4">
-      Your browser does not support this video.
-    </video>
+      hide_controls=true
+      picture_in_picture=false
+      muted=true
+      loop=true
+      playsinline=true
+      pause_on_click=true
+      %}
     <p>10 obstacles</p>
   </div>
-  <div class="video-item tighter">
-    <video
-      class="autoplay-in-frame"
+  <div class="multicontent-item">
+    {% include util/video
+      content="assets/20obs.mp4"
+      poster="assets/thumb/20obs.jpg"
+      autoplay-in-frame=true
       preload="none"
-      disableremoteplayback
-      disablepictureinpicture
-      playsinline
-      muted
-      loop
-      onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/20obs.jpg">
-      <source src="assets/20obs.mp4" type="video/mp4">
-      Your browser does not support this video.
-    </video>
+      hide_controls=true
+      muted=true
+      loop=true
+      playsinline=true
+      pause_on_click=true
+      %}
     <p>20 obstacles</p>
   </div>
-  <div class="video-item tighter">
-    <video
-      class="autoplay-in-frame"
+  <div class="multicontent-item">
+    {% include util/video
+      content="assets/40obs.mp4"
+      poster="assets/thumb/40obs.jpg"
+      autoplay-in-frame=true
       preload="none"
-      disableremoteplayback
-      disablepictureinpicture
-      playsinline
-      muted
-      loop
-      onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/40obs.jpg">
-      <source src="assets/40obs.mp4" type="video/mp4">
-      Your browser does not support this video.
-    </video>
+      hide_controls=true
+      muted=true
+      loop=true
+      playsinline=true
+      pause_on_click=true
+      %}
     <p>40 obstacles</p>
   </div>
 </div><!-- END SIMULATION VIDEOS -->
@@ -216,36 +209,32 @@ On the other hand, MPOT and TRAJOPT both stop due to colliding with the environm
 
 We also demonstrate success with other hardware configurations.
 <!-- START HARDWARE VIDEOS -->
-<div class="video-container">
-  <div class="video-item">
-    <video
-      class="autoplay-in-frame"
+<div class="multicontent-container">
+  <div class="multicontent-item">
+    {% include util/video
+      content="assets/ikea.mp4"
+      poster="assets/thumb/ikea.jpg"
+      autoplay-in-frame=true
       preload="none"
-      disableremoteplayback
-      disablepictureinpicture
-      playsinline
-      muted
-      loop
-      onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/ikea.jpg">
-      <source src="assets/ikea.mp4" type="video/mp4">
-      Your browser does not support this video.
-    </video>
+      hide_controls=true
+      muted=true
+      loop=true
+      playsinline=true
+      pause_on_click=true
+      %}
   </div>
-  <div class="video-item">
-    <video
-      class="autoplay-in-frame"
+  <div class="multicontent-item">
+    {% include util/video
+      content="assets/shelves.mp4"
+      poster="assets/thumb/shelves.jpg"
+      autoplay-in-frame=true
       preload="none"
-      disableremoteplayback
-      disablepictureinpicture
-      playsinline
-      muted
-      loop
-      onclick="this.paused ? this.play() : this.pause();"
-      poster="assets/thumb/shelves.jpg">
-      <source src="assets/shelves.mp4" type="video/mp4">
-      Your browser does not support this video.
-    </video>
+      hide_controls=true
+      muted=true
+      loop=true
+      playsinline=true
+      pause_on_click=true
+      %}
   </div>
 </div><!-- END HARDWARE VIDEOS -->
 </div><!-- END RESULTS -->
@@ -275,9 +264,7 @@ This project was developed in [Robotics and Optimization for Analysis of Human M
   title={Let's Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat},
   author={Jonathan Michaux and Seth Isaacson and Challen Enninful Adu and Adam Li and Rahul Kashyap Swayampakula and Parker Ewen and Sean Rice and Katherine A. Skinner and Ram Vasudevan},
   year={2024},
-  eprint={2409.16915},
-  archivePrefix={arXiv},
-  primaryClass={cs.RO},
+  journal={arXiv preprint arXiv:2409.16915},
   url={https://arxiv.org/abs/2409.16915}, 
 }
 ```
