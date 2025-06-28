@@ -57,7 +57,7 @@ links:
   - icon: bi-file-earmark-text-fill
     icon-library: bootstrap-icons
     text: Math Supplement
-    url: https://github.com/user-attachments/files/20892287/Splanning_Mathematical_Supplement.pdf
+    url: https://drive.google.com/file/d/1OVRNBCspSVJt1fQErTBAhxzfQSrUavcK/view
   - icon: github
     icon-library: simpleicons
     text: Code (Coming Soon!)
