@@ -265,12 +265,16 @@ This project was developed in [Robotics and Optimization for Analysis of Human M
 
 ```bibtex
 @article{michauxisaacson2024splanning,
-  title={Let's Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat},
-  author={Jonathan Michaux and Seth Isaacson and Challen Enninful Adu and Adam Li and Rahul Kashyap Swayampakula and Parker Ewen and Sean Rice and Katherine A. Skinner and Ram Vasudevan},
-  year={2024},
-  journal={arXiv preprint arXiv:2409.16915},
-  url={https://arxiv.org/abs/2409.16915}, 
-}
+  author={Michaux, Jonathan and Isaacson, Seth and Adu, Challen Enninful and Li, Adam and Swayampakula, Rahul Kashyap and Ewen, Parker and Rice, Sean and Skinner, Katherine A. and Vasudevan, Ram},
+  journal={IEEE Transactions on Robotics}, 
+  title={Let's Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-19},
+  keywords={Robots;Collision avoidance;Three-dimensional displays;Planning;Neural radiance field;Trajectory optimization;Computational modeling;Geometry;Real-time systems;Point cloud compression;3D gaussian splatting;collision avoidance;motion and path planning},
+  doi={10.1109/TRO.2025.3584559}}
+
 ```
 </div>
 <!-- END CITATION -->
