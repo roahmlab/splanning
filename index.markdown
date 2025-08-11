@@ -60,8 +60,8 @@ links:
     url: https://drive.google.com/file/d/1OVRNBCspSVJt1fQErTBAhxzfQSrUavcK/view
   - icon: github
     icon-library: simpleicons
-    text: Code (Coming Soon!)
-    # url: https://github.com/roahmlab/splanning
+    text: Code
+    url: https://github.com/roahmlab/splanning
 
 # End Front Matter
 ---
@@ -138,7 +138,7 @@ $$
 \end{align}
 $$
 
-The paper, coming soon, details the derivation of the bound on the probability of collision.
+The paper details the derivation of the bound on the probability of collision.
 
 Our key contributions are:
 1. A derivation of a bound on the probability that a 3D body collides with a scene represented by a radiance field, starting directly from the rendering equation;
