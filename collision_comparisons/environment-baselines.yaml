@@ -1,0 +1,46 @@
+name: splanning-baselines
+channels:
+  - defaults
+  - nvidia/label/cuda-11.8.0
+  - conda-forge
+dependencies:
+  - python=3.11.7
+  - numpy<2
+  - conda-forge::cyipopt=1.4.1=py311ha40a8ab_3
+  - conda-forge::python_abi=3.11
+  - pytorch::pytorch=2.1.2=py3.11_cuda11.8_cudnn8.7.0_0
+  - pytorch::torchvision=0.16.2=py311_cu118
+  - pytorch::torchaudio=2.1.2=py311_cu118
+  - pytorch::torchtriton=2.1.0=py311
+  - pytorch::pytorch-mutex=1.0=cuda
+  - pytorch::pytorch-cuda=11.8
+  - nvidia/label/cuda-11.8.0::cuda-libraries=11.8.0
+  - nvidia/label/cuda-11.8.0::cuda-runtime=11.8.0
+  - nvidia/label/cuda-11.8.0::libcublas=11.11.3.6
+  - nvidia/label/cuda-11.8.0::libcufft=10.9.0.58
+  - nvidia/label/cuda-11.8.0::libcusolver=11.4.1.48
+  - nvidia/label/cuda-11.8.0::libcusparse=11.7.5.86
+  - nvidia/label/cuda-11.8.0::libnpp=11.8.0.86
+  - nvidia/label/cuda-11.8.0::libnvjpeg=11.9.0.86
+  - nvidia/label/cuda-11.8.0::cuda-toolkit=11.8.0=0
+  - pyyaml
+  - main::pip
+  - pip:
+    - matplotlib
+    - scipy>=1.8.0
+    - urchin
+    - trimesh==4.0.5
+    - python-fcl
+    - pyrender
+    - gym
+    - moviepy
+    - tqdm
+    - open3d
+    - omegaconf
+    - fast_simplification==0.1.7
+    - plyfile
+    - "git+https://github.com/roahmlab/zonopy-robots.git@aa47341955b665275c913708e0496e2537d87d95#egg=zonopy-robots"
+    - "git+https://github.com/roahmlab/zonopy.git@58bccf9654f4ff848b35ed373ffd96fa435f35b6#egg=zonopy"
+    - ninja
+    - "git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch"
+    - nerfstudio==1.1.5

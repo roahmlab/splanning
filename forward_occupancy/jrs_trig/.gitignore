@@ -1,0 +1,3 @@
+*.mat
+!jrs_trig_tensor_saved/
+!jrs_trig_tensor_saved/*.mat

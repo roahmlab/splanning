@@ -1,0 +1,64 @@
+device: cuda
+dtype: float32
+visualize: false
+video: false
+reachset_viz: false
+verbose: false
+basepath: null
+
+robot:
+  target: zonopyrobots.ZonoArmRobot
+  # urdf_ref is a code reference to an object
+  urdf_ref: zonopyrobots.robots.files.KinovaGen3
+  params:
+    urdf: null # will be overwritten by urdf_ref if provided
+    create_joint_occupancy: true
+  joint_radius_override:
+    joint_1: 0.0503305
+    joint_2: 0.0630855
+    joint_3: 0.0463565
+    joint_4: 0.0634475
+    joint_5: 0.0352165
+    joint_6: 0.0542545
+    joint_7: 0.0364255
+    end_effector: 0.0394685
+
+splats:
+  radial_culling_radius: 1.227
+  radial_culling_sigma_mag: 8.5
+  sigma_magnification: 6
+  splat_subpath: point_cloud/iteration_30000/splat.csv
+  models_path: /home/sethgi/splanning_data_export/models/normalized_3dgs
+
+splanning:
+  constraint_alpha: 0.025
+  constraint_beta: 0.025
+  spheres_per_link: 5
+  check_self_collisions: false
+  linear_solver: "ma27"
+  planner_kd: 0.0
+  filter_links: false
+
+sparrows:
+  spheres_per_link: 5
+  check_self_collisions: false
+  linear_solver: "ma27"
+  filter_links: false
+
+armtd:
+  filter_obstacles: false
+  linear_solver: "ma27"
+
+experiment:
+  method: null
+  num_steps: 150
+  step_timelimit: 0.5
+  t_final_threshold: 0.2 # The l2 distance from the goal when we force braking to get to the goal
+  force_failsafe: true # if true, the planner will force the failsafe is within the env goal_threshold
+  scenes_path: /home/sethgi/splanning_data_export/scenes
+  results_path: ./results/planning_results/
+  summary_path: ./results/summary
+  run_name: null
+  selected_scenarios: null
+  env_self_collisions: false
+  save_trajectories: false

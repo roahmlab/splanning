@@ -1,0 +1,160 @@
+basepath: null
+datapath: collision_data
+scenes_path: /mnt/ws-frb/projects/splanning/resubmission/simulation_experiments/scenes/
+selected_scenarios:
+  - 10obs/scene_0
+  - 10obs/scene_5
+  - 10obs/scene_10
+  - 10obs/scene_15
+  - 10obs/scene_20
+  - 20obs/scene_0
+  - 20obs/scene_5
+  - 20obs/scene_10
+  - 20obs/scene_15
+  - 20obs/scene_20
+  - 40obs/scene_0
+  - 40obs/scene_5
+  - 40obs/scene_10
+  - 40obs/scene_15
+  - 40obs/scene_20
+run_config: collision_data/baselines
+
+trial_data:
+  splanning:
+    include: true
+    run_config: collision_data/baselines
+    method: splanning
+    comparison_key: config_collisions
+    gt_key: gt_config_collisions
+    parameter_key: alphas
+  
+  catnips1:
+    include: false
+    run_config: collision_data/catnips_spread
+    method: catnips_1
+    comparison_key: config_collisions
+    gt_key: gt_config_collisions
+    parameter_key: sigma_levels
+  
+  catnips2:
+    include: false
+    run_config: collision_data/catnips_spread
+    method: catnips_5
+    comparison_key: config_collisions
+    gt_key: gt_config_collisions
+    parameter_key: sigma_levels
+  
+  catnips3:
+    include: false
+    run_config: collision_data/catnips_spread
+    method: catnips_10
+    comparison_key: config_collisions
+    gt_key: gt_config_collisions
+    parameter_key: sigma_levels
+
+  basecatnips:
+    include: true
+    run_config: collision_data/catnips_base
+    method: catnips
+    comparison_key: config_collisions
+    gt_key: gt_config_collisions
+    parameter_key: sigma_levels
+
+  splat_nav:
+    include: true
+    run_config: collision_data/baselines
+    method: splatnav
+    comparison_key: config_collisions
+    gt_key: gt_config_collisions
+    parameter_key: sigma_levels
+  
+export:
+  data_filename: data.json
+  plot:
+    enabled: true
+    pdf: precision_recall.pdf
+    eps: null
+    png: null
+    styles:
+      splanning:
+        color: '#41ab5d'
+        marker: '^'
+        # label: 'SPLANNING: ($\alpha$, $\beta$) in $(0,1)^2$'
+        label: 'SPLANNING'
+        linewidth: 1.5
+        markersize: 5
+        highlight:
+          idx: 44
+          marker: '^'
+          markersize: 10
+          markeredgecolor: 'black'
+          markeredgewidth: 2
+      splat_nav:
+        color: '#41b6c4'
+        marker: 'o'
+        label: 'Splat-Nav'
+        linewidth: 1.5
+        markersize: 5
+        highlight:
+          idx: 25
+          marker: 'o'
+          markersize: 10
+          markeredgecolor: 'black'
+          markeredgewidth: 2
+      catnips1:
+        color: '#fec44f'
+        marker: 's'
+        label: 'CATNIPS: $N_{aux}^{max}$=1'
+        linewidth: 1.5
+        markersize: 5
+        highlight:
+          idx: 11
+          marker: 's'
+          markersize: 10
+          markeredgecolor: 'black'
+          markeredgewidth: 2
+      catnips2:
+        color: '#fe9929'
+        marker: 's'
+        label: 'CATNIPS: $N_{aux}^{max}$=5'
+        linewidth: 1.5
+        markersize: 5
+        highlight:
+          idx: 11
+          marker: 's'
+          markersize: 10
+          markeredgecolor: 'black'
+          markeredgewidth: 2
+      catnips3:
+        color: '#8c510a'
+        marker: 's'
+        label: 'CATNIPS: $N_{aux}^{max}$=over 9000'
+        linewidth: 1.5
+        markersize: 5
+        highlight:
+          idx: 11
+          marker: 's'
+          markersize: 10
+          markeredgecolor: 'black'
+          markeredgewidth: 2
+      basecatnips:
+        color: '#7f0000'
+        marker: 's'
+        label: 'CATNIPS'
+        linewidth: 1.5
+        markersize: 5
+        highlight:
+          idx: 11
+          marker: 's'
+          markersize: 10
+          markeredgecolor: 'black'
+          markeredgewidth: 2
+    inset:
+      axes: [0.2, 0.4, 0.4, 0.3]
+      # xlim: [0.95, 1.01]
+      # ylim: [0.4, 0.9]
+      xlim: [0.97,1.01]
+      ylim: [0.5,1.0]
+
+
+# plot:

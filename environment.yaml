@@ -1,0 +1,43 @@
+name: splanning
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10.14
+  - numpy==1.26.4
+  - conda-forge::cyipopt=1.4.1=py310h23d91ed_2
+  - conda-forge::python_abi=3.10
+  - pytorch::pytorch=2.2.0=py3.10_cuda12.1_cudnn8.9.2_0
+  - pytorch::torchvision=0.17.0=py310_cu121
+  - pytorch::torchaudio=2.2.0=py310_cu121
+  - pytorch::torchtriton=2.2.0=py310
+  - pytorch::pytorch-mutex=1.0=cuda
+  - pytorch::pytorch-cuda=12.1
+  - nvidia::cuda-libraries=12.1.0
+  - nvidia::cuda-runtime=12.1.0
+  - nvidia::libcublas=12.1.0.26
+  - nvidia::libcufft=11.0.2.4
+  - nvidia::libcusolver=11.4.4.55
+  - nvidia::libcusparse=12.0.2.55
+  - nvidia::libnpp=12.0.2.50
+  - nvidia::libnvjpeg=12.1.1.14 
+  - pyyaml
+  - main::pip
+  - pip:
+    - matplotlib
+    - scipy>=1.8.0
+    - urchin
+    - trimesh==4.0.5
+    - python-fcl
+    - pyrender
+    - gym
+    - moviepy
+    - numpy==1.26.4
+    - ruamel.yaml
+    - tqdm
+    - open3d
+    - omegaconf
+    - fast_simplification==0.1.7
+    - plyfile
+    - "git+https://github.com/roahmlab/zonopy-robots.git@aa47341955b665275c913708e0496e2537d87d95#egg=zonopy-robots"
+    - "git+https://github.com/roahmlab/zonopy.git@58bccf9654f4ff848b35ed373ffd96fa435f35b6#egg=zonopy"

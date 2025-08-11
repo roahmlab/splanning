@@ -1,0 +1,166 @@
+device: cpu
+dtype: float32
+verbose: true
+basepath: null
+datapath: collision_data
+seed: 42
+prefix: baselines
+scenes_path: null
+selected_scenarios:
+  - 10obs/scene_0
+  - 10obs/scene_5
+  - 10obs/scene_10
+  - 10obs/scene_15
+  - 10obs/scene_20
+  - 20obs/scene_0
+  - 20obs/scene_5
+  - 20obs/scene_10
+  - 20obs/scene_15
+  - 20obs/scene_20
+  - 40obs/scene_0
+  - 40obs/scene_5
+  - 40obs/scene_10
+  - 40obs/scene_15
+  - 40obs/scene_20
+
+robot:
+  target: zonopyrobots.ZonoArmRobot
+  # urdf_ref is a code reference to an object
+  urdf_ref: zonopyrobots.robots.files.KinovaGen3
+  params:
+    urdf: null # will be overwritten by urdf_ref if provided
+    create_joint_occupancy: true
+  sphere_fk_params:
+    joint_radius_override:
+      joint_1: 0.0503305
+      joint_2: 0.0630855
+      joint_3: 0.0463565
+      joint_4: 0.0634475
+      joint_5: 0.0352165
+      joint_6: 0.0542545
+      joint_7: 0.0364255
+      end_effector: 0.0394685
+    n_spheres_per_link: 5
+    # if null, all links will be used.
+    specified_links: null #[2, 3, 4, 5, 6]
+    include_joints: false
+
+config_samples:
+  # if specified, samples won't be generated and the override_name file will be used
+  # for all downstream processes.
+  override_name: null
+  override_waypoint_csv: null
+  max_sample_attempts: 10000
+  sample_size: 1000
+  compress: true
+  joint_sampling:
+    method: uniform # uniform, random, list
+    all: false
+    # The following can be a list, dict or a single value.
+    # If a dict, it should have the same keys as the joint names.
+    # If a single value, it will be used for all joints.
+    num:
+      joint_1: 21
+      joint_2: 11
+      joint_3: 1
+      joint_4: 11
+      joint_5: 1
+      joint_6: 11
+      joint_7: 1
+    # if range is not provided, the urdf limits will be used.
+    # if a single range is provided, it will be used for all joints.
+    range:
+      joint_1: [-3.141592653589793, 3.141592653589793]
+      joint_2: [0.0, 3.141592653589793]
+      joint_3: [0.0, 0.0]
+      joint_4: [-1.570796326794897, 1.570796326794897]
+      joint_5: [0.0, 0.0]
+      joint_6: [-1.570796326794897, 1.570796326794897]
+      joint_7: [0.0, 0.0]
+  # sample_stratification:
+  #   method: center_dist # center_dist, surface_dist
+  #   unit: "size" # "size" for (max) obs_size, null for default (meters)
+  #   num_per_strata: 10
+  #   strata: # Define the upper bound of the strata. null for no upper bound.
+  #     collision_close: 1
+  #     close: 2
+  #     safe: null
+  sample_stratification:
+    method: surface_dist
+    unit: null
+    num_per_strata: 30
+    strata:
+      collision: 0
+      close: 0.4
+      safe: null
+  # None for whatever is computed, max for the max in the selected set, or a float for a specific value.
+  computed_sets:
+    spheres_max_all: "allmax"
+    spheres_max: "max"
+    spheres_provided: null
+    spheres_fixed: 0.0747
+
+splanning:
+  skip: false
+  gt_set: spheres_provided
+  alpha_sampling:
+    method: log # uniform, random, list, log
+    num: 61 #idx 44 ~ corresponds to 0.025
+    range: [-6, 0]
+    base: 10
+    all: true
+  splats:
+    radial_culling_radius: 1.227
+    radial_culling_sigma_mag: 8.5
+    sigma_magnification: 6
+    splat_subpath: point_cloud/iteration_30000/splat.csv
+    models_path: null
+  
+splat_nav:
+  skip: false
+  gt_set: spheres_provided
+  sigma_level_set_sampling:
+    method: log # uniform, random, list, log
+    num: 31 #idx 25 corresponds to 1
+    range: [-5, 1]
+    base: 10
+    all: true
+  splats:
+    radial_culling_radius: 1.227
+    radial_culling_sigma_mag: 8.5
+    sigma_magnification: 6
+    splat_subpath: point_cloud/iteration_30000/point_cloud.ply
+    models_path: null
+
+catnips:
+  skip: false
+  gt_set: spheres_max_all
+  gpu_accel:
+    visible_gpus: null
+    nprocs_per_gpu: 6
+  verbose_subprocess: false
+  catnips_base:
+    # sigma: 0.99    # Chance of being below interpenetration volume
+    discretization: 150    # Number of partitions per side of voxel grid
+    Aaux: 1e-8    # area of auxiliary/reference particle
+    dt: 1e-2    # depth of aux/ref particle
+    Vmax: 5e-6    # interpenetration volume
+    gamma: 1.    # occlusion threshold
+    grid: [
+      [-2, 2],
+      [-2, 0.5],
+      [-2.5, 2.5]
+    ]
+  # Aaux and Vmax are computed from Vaux and Nmax_aux
+  # Vaux: 1e-6
+  # Nmax_aux_list: [1, 5, 10]
+  sigmas_sampling:
+    method: list
+    range: [1e-8, 1e-6, 1e-4, 1e-2, 0.1, 0.2, 0.4, 0.6, 0.8, 0.9, 0.95, 0.99, 1.0] #idx11
+    all: true
+    # num: 30
+    # range: [-8, 0]
+    # all: true
+    # base: 10
+  nerfs:
+    models_path: null
