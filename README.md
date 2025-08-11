@@ -226,9 +226,9 @@ Relevant configuration settings can be found in `configs/collisions_baselines/ba
 ## Troubleshooting
 
 #### Any Numpy-Related Error
-If you see any error related to numpy, please first try `pip3 install numpy==1.26.4.
+If you see any error related to numpy, please first try `pip3 install numpy==1.26.4`.
 
-#### Import Error: version GLIBCXX_3.4.29' not found
+#### Import Error: 'version GLIBCXX_3.4.29' not found
 Your gcc is out of date. Install gcc>10. We use gcc11.
 
 ## Citation
@@ -246,6 +246,9 @@ Your gcc is out of date. Install gcc>10. We use gcc11.
 }
 ```
 
+## License
+
+This project is released under a `CC BY-NC-SA 4.0` license, which allows all non-commercial use but disallows commercial use. Refer to [LICENSE.md](LICENSE.md) for details.
 
 
 
